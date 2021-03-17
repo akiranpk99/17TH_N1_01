@@ -17,7 +17,15 @@ namespace WinformLogin
             InitializeComponent();
         }
         string user = "admin",pass="admin";
-        
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+            }
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (user==txbUser.Text&&pass==txbPass.Text)
