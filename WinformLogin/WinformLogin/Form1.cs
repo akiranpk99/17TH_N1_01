@@ -16,5 +16,21 @@ namespace WinformLogin
         {
             InitializeComponent();
         }
+        string user = "admin",pass="admin";
+        
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (user==txbUser.Text&&pass==txbPass.Text)
+            {
+                DialogResult result = MessageBox.Show("Login Succesful", "Everything is OK",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Login Failure", "Everything is not OK",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+            }
+
+        }
     }
 }
